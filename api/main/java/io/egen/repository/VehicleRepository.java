@@ -10,13 +10,11 @@ import java.util.List;
 public interface VehicleRepository {
     List<Vehicle> findAll();
 
-    Vehicle findOne(String id);
+    Vehicle findOne(String vin);
 
-    Vehicle findByEmail(String email);
+    Vehicle create(Vehicle vehicle);
 
-    Vehicle create(Vehicle emp);
+    Vehicle update(Vehicle vehicle);
 
-    Vehicle update(Vehicle emp);
-
-    void delete(Vehicle emp);
+    void delete(Vehicle vehicle);
 }

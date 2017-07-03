@@ -11,9 +11,6 @@ import java.sql.Timestamp;
 
 
 @Entity
-@NamedQuery(name = "Vehicle.findAll",query = "SELECT vehicle FROM Vehicle vehicle ORDER BY vehicle.model DESC")
-
-
 public class Vehicle {
 
 
@@ -25,6 +22,7 @@ public class Vehicle {
     private int redlineRpm;
     private int maxFuelVolume;
     private Timestamp lastServiceDate;
+
 
     public String getVin() {
         return vin;

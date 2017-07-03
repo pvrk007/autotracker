@@ -1,11 +1,17 @@
 package main.java.io.egen.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.sql.Timestamp;
 
 /**
  * Created by Rama on 6/30/2017.
  */
-public class Reading {
+@Entity
+public class Readings {
+    @Id
     private String vin;
     private float latitude;
     private float longitude;
@@ -17,6 +23,7 @@ public class Reading {
     private boolean engineCoolantLow;
     private boolean cruiseControlOn;
     private int engineRpm;
+    @OneToOne(cascade = {CascadeType.ALL})
     private Tires tires;
 
     public String getVin() {

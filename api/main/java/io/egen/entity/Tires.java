@@ -1,13 +1,18 @@
 package main.java.io.egen.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
- * Created by Rama on 6/30/2017.
+ * Created by Rama on 7/2/2017.
  */
+@Entity
 public class Tires {
+    @Id
+    private String vin;
     private int frontLeft;
     private int frontRight;
     private int rearLeft;
-    private int rearRight;
 
     public int getFrontLeft() {
         return frontLeft;
@@ -40,5 +45,6 @@ public class Tires {
     public void setRearRight(int rearRight) {
         this.rearRight = rearRight;
     }
-}
 
+    private int rearRight;
+}
